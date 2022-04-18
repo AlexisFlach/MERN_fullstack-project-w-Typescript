@@ -1,16 +1,26 @@
-import express, { Request, Response } from 'express';
+import express from 'express';
 import dotenv from 'dotenv';
 
-import { getAllUsers } from './controllers/getAllUsers';
+import userRoutes from './routes/users';
+
+import db from './config/db';
+import cors from 'cors';
+
 dotenv.config();
 
-const app = express();
+const router = express();
 
-app.get('/', (req: Request, res: Response) => {
-  getAllUsers(req, res);
-});
+db.connect();
+
+router.use(express.urlencoded({ extended: false }));
+router.use(express.json());
+router.use(cors());
+
+router.use('/api/users', userRoutes);
 
 const PORT = process.env.DEV_PORT || 5001;
-app.listen(PORT, () => {
+router.listen(PORT, () => {
   console.log(`Server is listening on port: ${PORT}`);
 });
+
+export { router };
