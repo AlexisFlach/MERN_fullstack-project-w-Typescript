@@ -11,8 +11,10 @@ router.use(express.urlencoded({ extended: false }));
 router.use(express.json());
 router.use(cors());
 
-router.use('/albums', albumRoutes);
-router.use('/artists', artistRoutes);
+connectDB();
+
+router.use('/api/albums', albumRoutes);
+router.use('/api/artists', artistRoutes);
 
 const PORT = process.env.PORT || 5001;
 

@@ -6,8 +6,8 @@ const router = express();
 router.use(express.urlencoded({ extended: false }));
 router.use(express.json());
 
-router.use('/albums', albumRoutes);
-router.use('/artists/', artistRoutes);
+router.use('/api/albums', albumRoutes);
+router.use('/api/artists/', artistRoutes);
 
 const PORT = 4002;
 

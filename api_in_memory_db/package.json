@@ -1,5 +1,5 @@
 {
-  "name": "ts-course",
+  "name": "api_in_memory_db",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -21,6 +21,9 @@
     "typescript": "^4.6.3"
   },
   "dependencie s": {
+    "express": "^4.17.3"
+  },
+  "dependencies": {
     "express": "^4.17.3"
   }
 }

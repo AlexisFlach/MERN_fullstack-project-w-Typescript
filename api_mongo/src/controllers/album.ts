@@ -12,6 +12,7 @@ export const getAlbum = async (req: Request, res: Response) => {
 };
 
 export const getAllAlbums = async (req: Request, res: Response) => {
+  console.log('Trying');
   const albums = await repo.getAlbums();
   res.status(200).send({ albums });
 };
