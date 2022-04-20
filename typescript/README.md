@@ -125,10 +125,69 @@ const pepsi: Drink = ['brown', true, 40];
 
 #### Interfaces
 
+Creates a new type, describing the property names and value types of an object
 
+```typescript
+interface Player {
+  id: number;
+  name: string;
+  weapons: any[];
+}
 
+const printPlayer2 = (player: Player) => {
+  console.log(`Id: ${player.id}`);
+  console.log(`Id: ${player.name}`);
+  console.log(`Id: ${player.weapons}`);
+};
+```
 
+General Strategy for Reusable Code in Typescript:
 
+- Create functions that accept arguments that are typed with interfaces
+
+- Objects/classes can decide to implement a given interface to work with a function
+
+#### Classes
+
+Blueprint to create an object with some fields(values) and methods (functions) to represent a 'thing'
+
+```typescript
+class Player {
+  // name: string;
+
+  constructor(public name: string) {
+    this.name = name;
+  }
+
+  attack(): void {
+    console.log('Attack!!');
+  }
+
+  scream(): void {
+    console.log('Ahhhh!!!');
+  }
+
+  private vulnerability(): void {
+    console.log('I am not strong enough');
+  }
+
+  showVulnerability(): void {
+    return this.vulnerability();
+  }
+}
+
+class Hobbit extends Player {
+  constructor(public id: number, name: string) {
+    super(name);
+  }
+}
+
+const frodo = new Hobbit(1, 'Frodo');
+
+frodo.scream();
+
+frodo.showVulnerability();
+```
 
 
 
