@@ -6,7 +6,7 @@ An easy way to refer to the different properties and functions that a value has.
 
 A value is anything that we can assign to a variable.
 
-```
+```typescript
 [1, 2, 3]
 ```
 
@@ -82,6 +82,61 @@ author = 'Jack Kerouac'
 
 - A type that means that Typescript has no idea what it is
 - Avoid any!
+
+#### Type annotations for Functions and Objects
+
+**Type annotations for functions**
+
+Code we add to tell Typescript what type of arguments a function will receive and what type of values it will return
+
+**Type inference for functions**
+
+TS tries to figure out what type of value a function will return
+
+#### Typed Arrays
+
+Arrays where each element if some consistent type of value.
+
+- TS can do type inference when extracting values from an array
+- TS can prevent us from adding incompatible values to the array
+- We can get help with map(), forEach(), reduce() etc
+- Flexible - arrays can still contain multiple different types
+
+```typescript
+const userNames = ['Alex', 'Bob', 'Ma'];
+
+userNames.push(1);
+```
+
+```typescript
+const namesAndIds: (string | number)[] = [];
+```
+
+#### Tuples
+
+Array-like structure where each element represents some property of a record
+
+```typescript
+type Drink = [string, boolean, number];
+
+// const pepsi: [string, boolean, number] = ['brown', true, 40];
+const pepsi: Drink = ['brown', true, 40];
+```
+
+#### Interfaces
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
