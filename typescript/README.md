@@ -189,10 +189,12 @@ frodo.scream();
 frodo.showVulnerability();
 ```
 
+#### Länkar
 
-
-
-
+https://www.typescriptlang.org/docs/handbook/basic-types.html
+https://www.udemy.com/course/typescript-the-complete-developers-guide/ 
+https://www.youtube.com/watch?v=BCg4U1FzODs&ab_channel=TraversyMedia
+https://www.freecodecamp.org/news/an-introduction-to-typescript/
 
 
 
